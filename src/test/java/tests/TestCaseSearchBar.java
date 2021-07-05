@@ -14,7 +14,7 @@ public class TestCaseSearchBar {
 	
 	WebDriver driver;
 	PageHomePage objHomePage;
-	PageProduct objProducts;
+	PageProduct objProduct;
 	
 	String keyword;
 	String expectedLabel = "TYPE AND PRESS ENTER TO SEARCH";
@@ -77,7 +77,7 @@ public class TestCaseSearchBar {
 		// Rechercher l'input de recherche, écrire "dress" dedans, et presser ENTRER
 		objHomePage.setSearchInputElement(keyword);
 		
-		objProducts = new PageProduct(driver);
-		Assert.assertEquals(expectedSearchInfo, objProducts.getTextInfoSearchElement());
+		objProduct = new PageProduct(driver);
+		Assert.assertEquals(expectedSearchInfo, objProduct.getTextInfoSearchElement());
 	}
 }
