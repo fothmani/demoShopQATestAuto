@@ -31,20 +31,25 @@ public class DemoShopQABlog {
 	public void Access_on_the_blog() throws InterruptedException {
 		DemoShopService demoShopQAHome = new DemoShopService(driver);
 		demoShopQAHome.clickOnBlog();
-		Assert.assertEquals("Add Color and Life with Accent Furnishings – ToolsQA Demo Site", driver.getTitle());
+		Assert.assertEquals("Add Color and Life with Accent Furnishings â€“ ToolsQA Demo Site", driver.getTitle());
 		Assert.assertEquals("https://shop.demoqa.com/2016/05/04/add-color-and-life-with-accent-furnishings/", driver.getCurrentUrl());
 	
 	}
 
 	@Test
-	public void comment_on_the_blog() throws InterruptedException {
+	public void commentOnBlogWithoutFillCapcha() throws InterruptedException {
 		DemoShopService demoShopQAHome = new DemoShopService(driver);
 		demoShopQAHome.clickOnBlog();
-		demoShopQAHome.createCommentary("Tavia","tavia@mail.com","this is my commentary");
-		String ErrorMessage = ("Error: You entered an incorrect CAPTCHA answer. Please go back and try again.");
-		Object comments = null;
-		Assert.assertNotEquals(ErrorMessage, comments);
-		System.out.println("Comments are undone with submit");	
+		demoShopQAHome.createCommentary("Tavia", "tavia@mail.com", "this is my commentary");
+
+		Thread.sleep(1000);
+
+		Boolean isCommentary = driver.getPageSource().contains("this is my commentary");
+		Assert.assertEquals(false, isCommentary);
+
+		Boolean isError = driver.getPageSource()
+				.contains("Error: You entered an incorrect CAPTCHA answer. Please go back and try again!");
+		Assert.assertEquals(true, isError);
 		
 	}
 
