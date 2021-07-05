@@ -8,13 +8,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 import pages.PageHomePage;
-import pages.PageProducts;
+import pages.PageProduct;
 
 public class TestCaseSearchBar {
 	
 	WebDriver driver;
 	PageHomePage objHomePage;
-	PageProducts objProducts;
+	PageProduct objProducts;
 	
 	String keyword;
 	String expectedLabel = "TYPE AND PRESS ENTER TO SEARCH";
@@ -57,7 +57,7 @@ public class TestCaseSearchBar {
 		// Rechercher l'input de recherche, écrire "dress" dedans, et presser ENTRER
 		objHomePage.setSearchInputElement(keyword);
 		
-		objProducts = new PageProducts(driver);
+		objProducts = new PageProduct(driver);
 		Assert.assertEquals(expectedNbArticle, objProducts.getNumberOfArticles());
 	}
 	
@@ -77,7 +77,7 @@ public class TestCaseSearchBar {
 		// Rechercher l'input de recherche, écrire "dress" dedans, et presser ENTRER
 		objHomePage.setSearchInputElement(keyword);
 		
-		objProducts = new PageProducts(driver);
+		objProducts = new PageProduct(driver);
 		Assert.assertEquals(expectedSearchInfo, objProducts.getTextInfoSearchElement());
 	}
 }
