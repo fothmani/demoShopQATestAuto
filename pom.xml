@@ -26,5 +26,15 @@
          <artifactId>extentreports</artifactId>
          <version>5.0.8</version>
       </dependency>
+	  <dependency>
+		 <groupId>io.cucumber</groupId>
+		 <artifactId>cucumber-java</artifactId>
+		 <version>6.10.4</version>
+	  </dependency>
+	  <dependency>
+	     <groupId>io.cucumber</groupId>
+	     <artifactId>cucumber-junit</artifactId>
+	     <version>6.10.4</version>
+	  </dependency>
    </dependencies>
 </project>
