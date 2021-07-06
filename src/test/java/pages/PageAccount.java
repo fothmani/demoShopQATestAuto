@@ -45,8 +45,8 @@ public class PageAccount {
 	By lost_pswd = By.cssSelector("#customer_login > div.u-column1.col-1 > form > p.woocommerce-LostPassword.lost_password > a");
 	By pswrd_forget = By.id("user_login");
 	By reset_button = By.cssSelector("#post-8 > div > div > form > p:nth-child(4) > button");
-    By msg_pswrd_sent = By.cssSelector("#post-8 > div > div > div");
-    By fail_pswrd = By.cssSelector("#post-8 > div > div > div.woocommerce-notices-wrapper > ul > li");
+	By msg_pswrd_sent = By.cssSelector("#post-8 > div > div > div");
+	By fail_pswrd = By.cssSelector("#post-8 > div > div > div.woocommerce-notices-wrapper > ul > li");
 	// ________________________________________________________________________________________________________________________
 	
     // Logout:
