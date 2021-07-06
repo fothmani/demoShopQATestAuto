@@ -239,4 +239,8 @@ public class PageAccount {
 	public String getInfoConnectionFail() {
 		return driver.findElement(fail_pswrd).getText();
 	}
+	
+	public int countInfoConnectionFail() {
+		return driver.findElements(fail_pswrd).size();
+	}
 }
