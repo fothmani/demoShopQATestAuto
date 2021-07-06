@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -76,7 +77,10 @@ public class PageShop {
 	}
 	
 	public void click_dismiss() {
-		driver.findElement(dissmiss).click();
+		try {
+			driver.findElement(dissmiss).click();
+		}
+		catch(NoSuchElementException e) {}
 	}
 	
 	public Select getColorSelectElement() {
