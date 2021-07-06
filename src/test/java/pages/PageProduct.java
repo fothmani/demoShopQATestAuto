@@ -3,6 +3,7 @@ package pages;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
@@ -10,66 +11,118 @@ import org.openqa.selenium.WebElement;
 
 
 /**
- * 
+ *
  */
 
 public class PageProduct {
 
-	WebDriver driver;
-	By searchHeader = By.className("noo-search");
-	By searchToolBar = By.name("s");
-	By selectColor = By.name("filter_color");
-	By selectSize = By.name("filter_size");
-	By linkProduct = By.cssSelector(".products .noo-product-item:nth-child(2) h3 a");
-	By productTitle = By.cssSelector(".product_title"); 
-	By productCard = By.cssSelector(".noo-product-item.product_cat-shirt .noo-product-thumbnail");
-	By productsElements = By.className("noo-product-item");
-	By responseInfo = By.className("woocommerce-info");
-	
+	protected WebDriver driver;
+
+	protected String url;
+
+	static By productsElements = By.className("noo-product-item");
+	static By responseInfo = By.className("woocommerce-info");
+	static By searchHeader = By.className("noo-search");
+
+	static By searchToolBar = By.name("s");
+	static By selectColor = By.name("filter_color");
+	static By selectSize = By.name("filter_size");
+
+	static By linkProduct = By.cssSelector(".products .noo-product-item:nth-child(2) h3 a");
+	static By productTitle = By.cssSelector(".product_title");
+	static By productCard = By.cssSelector(".noo-product-item.product_cat-shirt .noo-product-thumbnail");
+
+
 	public PageProduct(WebDriver driver) {
 		this.driver = driver;
+		this.url = this.driver.getCurrentUrl();
 	}
-	
+
+
+	public boolean isPopupProductAddedDisplayed() {
+		WebElement popup = driver.findElement(addedProductPopup);
+
+		System.out.println(popup);
+		System.out.println(popup.isDisplayed());
+		System.out.println(popup.getText());
+
+		return popup.isDisplayed()
+				&& popup.getText().equals("Product added !");
+	}
+
+	public boolean isPopupProductAlreadyAddedDisplayed() {
+		WebElement popup = driver.findElement(alreadyAddedProductPopup);
+
+		return popup.isDisplayed()
+				&& popup.getText().equals("The product is already in the wishlist!");
+	}
+
 	public void clickOnSearch() {
 		driver.findElement(searchHeader).click();
 	}
-	
+
 	public void enterSearching() {
 		driver.findElement(searchToolBar).sendKeys("shirt" + Keys.ENTER);
 	}
-	
+
 	public void selectColor() {
 		Select color = new Select(driver.findElement(selectColor));
 		color.selectByIndex(2);
 	}
-	
+
 	public void selectSize() {
 		Select size = new Select(driver.findElement(selectSize));
 		size.selectByIndex(2);
 	}
-	
+
+	public void setoptioncolor(String color) {
+		Select selectObject = new Select(driver.findElement(selectcolor));
+		selectObject.selectByValue(color);
+	}
+
+	public void setoptionsize(String size) {
+		Select selectObject = new Select(driver.findElement(selectsize));
+		selectObject.selectByValue(size);
+	}
+
 	public void clickProduct() {
 		driver.findElement(linkProduct).click();
 	}
-	
+
 	public String getProductTitle() {
 		return driver.findElement(productTitle).getText();
 	}
-	
+
 	public void clickProductCard() {
 		driver.findElement(productCard).click();
 	}
-	
+
 	public String getTextInfoSearchElement() {
-    	return driver.findElement(responseInfo).getText();
-    }
-	
+  	return driver.findElement(responseInfo).getText();
+  }
+
 	/**
 	 * Get number of Products
 	 */
 	public int getNumberOfArticles(){
 		List<WebElement> listProducts = driver.findElements(productsElements);
 		return listProducts.size();
+	}
+
+	public void clickOnAddToWishList() {
+		driver.findElement(addtowishlist).click();
+	}
+
+	public String getProductName() {
+		return driver.findElement(pageHeadingSection).findElement(pageHeadingTitle).getText();
+	}
+
+	public PageWishlist goToWishlist() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollTo(0,0)", "");
+
+		driver.findElement(topBarClass).findElements(liTag).get(0).findElement(aTag).click();
+		return new PageWishlist(driver);
 	}
 
 }
