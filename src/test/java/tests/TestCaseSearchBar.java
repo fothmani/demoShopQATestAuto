@@ -7,13 +7,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-import pages.PageHomePage;
+import pages.PageHome;
 import pages.PageProduct;
 
 public class TestCaseSearchBar {
 	
 	WebDriver driver;
-	PageHomePage objHomePage;
+	PageHome objHomePage;
 	PageProduct objProduct;
 	
 	String keyword;
@@ -46,7 +46,7 @@ public class TestCaseSearchBar {
 		keyword = "dress";
 		expectedNbArticle = 16;
 		// Instance of POM homepage
-		objHomePage = new PageHomePage(driver);
+		objHomePage = new PageHome(driver);
 		// Rechercher l'element search et cliquer dessus
 		objHomePage.clickSearchElement();
 		
@@ -57,7 +57,7 @@ public class TestCaseSearchBar {
 		// Rechercher l'input de recherche, écrire "dress" dedans, et presser ENTRER
 		objHomePage.setSearchInputElement(keyword);
 		
-		objProducts = new PageProduct(driver);
+		PageProduct objProducts = new PageProduct(driver);
 		Assert.assertEquals(expectedNbArticle, objProducts.getNumberOfArticles());
 	}
 	
@@ -66,7 +66,7 @@ public class TestCaseSearchBar {
 		keyword = "test";
 		
 		// Instance of POM homepage
-		objHomePage = new PageHomePage(driver);
+		objHomePage = new PageHome(driver);
 		// Rechercher l'element search et cliquer dessus
 		objHomePage.clickSearchElement();
 		

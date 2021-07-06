@@ -6,7 +6,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class PageHomePage {
+public class PageHome {
 
 	protected WebDriver driver;
 
@@ -36,7 +36,7 @@ public class PageHomePage {
 	static By addedProductPopup = By.cssSelector("div.yith-wcwl-popup-message div.yith-wcwl-message");
 
 
-	public PageHomePage(WebDriver driver){
+	public PageHome(WebDriver driver){
 		this.driver = driver;
 	}
 

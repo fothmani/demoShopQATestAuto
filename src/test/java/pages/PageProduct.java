@@ -20,14 +20,31 @@ public class PageProduct {
 
 	protected String url;
 
+	static By addtowishlist = By.className("yith-wcwl-add-button");
+	static By pageHeadingSection = By.className("noo-page-heading");
+	static By pageHeadingTitle = By.className("page-title");
 	static By productsElements = By.className("noo-product-item");
+	static By productname = By.className("product_title entry-title");
 	static By responseInfo = By.className("woocommerce-info");
 	static By searchHeader = By.className("noo-search");
+	static By topBarClass = By.className("noo-topbar-right");
+	
+	static By selectcolor = By.id("pa_color");
+	static By selectsize = By.id("pa_size");
+	static By popuptext = By.id("yith-wcwl-popup-message");
+	static By popupwrapper = By.id("yith-wcwl-message");
 
 	static By searchToolBar = By.name("s");
 	static By selectColor = By.name("filter_color");
 	static By selectSize = By.name("filter_size");
+	
+	static By wishlist = By.name("My Wishlist");
 
+	static By aTag = By.tagName("a");
+	static By liTag = By.tagName("li");
+
+	static By alreadyAddedProductPopup = By.cssSelector("div.products div.noo-product-item:first-child div.noo-product-inner div.yith-wcwl-wishlistexistsbrowse a");
+	static By addedProductPopup = By.cssSelector("div.yith-wcwl-popup-message div.yith-wcwl-message");
 	static By linkProduct = By.cssSelector(".products .noo-product-item:nth-child(2) h3 a");
 	static By productTitle = By.cssSelector(".product_title");
 	static By productCard = By.cssSelector(".noo-product-item.product_cat-shirt .noo-product-thumbnail");

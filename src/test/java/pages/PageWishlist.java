@@ -21,9 +21,9 @@ public class PageWishlist {
 	}
 	
 	
-	public PageHome goToHomePage () {
+	public PageWishlist goToHomePage () {
 		driver.findElement(home).click();
-		return new PageHome(this.driver);
+		return new PageWishlist(this.driver);
 	}
 	
 	public List<WebElement> getarticles() {
