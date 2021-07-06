@@ -22,7 +22,7 @@ public class TestCaseProduct {
 	}
 	
 	@Test
-	public void pageProductDetailsFromTitle(){
+	public void showProductDetailsFromTitle(){
 		PageProduct objProduct = new PageProduct(driver);
 				
 		objProduct.clickOnSearch();
@@ -34,7 +34,7 @@ public class TestCaseProduct {
 			}
 	
 	@Test
-	public void pageProductDetailsFromCard(){
+	public void showProductDetailsFromCard(){
 		PageProduct objProduct = new PageProduct(driver);
 				
 		objProduct.clickOnSearch();
