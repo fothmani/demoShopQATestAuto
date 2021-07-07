@@ -35,8 +35,9 @@ public class TestShopToolsPrendreContact {
         Assert.assertEquals("le champ cliquable", true, demoShop.prendreContactPhone().isEnabled());
         Assert.assertTrue("", demoShop.prendreContactPhone().isDisplayed() && demoShop.prendreContactPhone().isEnabled());
         demoShop.cliquerSurContactTelephone();
-        Assert.assertEquals("le champ cliquable", true,demoShop.prendreContactMail().isDisplayed() && demoShop.prendreContactMail().isEnabled() );
+        Assert.assertEquals("le champ cliquable", true, demoShop.prendreContactMail().isDisplayed() && demoShop.prendreContactMail().isEnabled());
         Assert.assertTrue("", demoShop.prendreContactPhone().isEnabled());
         demoShop.cliquerSurContactMail();
     }
 
+}
