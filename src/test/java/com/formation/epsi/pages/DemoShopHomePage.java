@@ -28,6 +28,12 @@ public class DemoShopHomePage {
 	By selectSize37 = By.className("attached enabled");
 	By clickAddCart = By.className("single_add_to_cart_button");
 	By clearCartBouton = By.className("empty-cart");
+	//elise
+    By searchInputTest = By.name("s");
+    By nbrArticle = By.className("noo-product-inner");
+    By telephone = By.cssSelector("a[href='tel:+(099)999-9999']");
+    By mail = By.cssSelector("a[href='mailto:nomail@toolsqa.com']");
+    By boutonDismiss = By.cssSelector(".woocommerce-store-notice__dismiss-link");
 	
 	
 	//Appel de constructeur avec le webdriver en argument
@@ -84,10 +90,44 @@ public class DemoShopHomePage {
 	public void viderPanier(){
 		driver.findElement(clearCartBouton).click();
 	}
-		/*
-	public int nbProducts() {
-		List<WebElement> nbrproduits = driver.findElements(produit);
-		return nbrproduits.size();
-	}*/
+	
+	// prendre contact
+    public void cliquerSurContactTelephone(){
+        driver.findElement(telephone).click();
+    }
+
+    public void cliquerSurContactMail(){
+        driver.findElement(mail).click();
+    }
+
+    public void attendreBoutonDismiss(){
+        WebDriverWait wait = new WebDriverWait(driver, 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".woocommerce-store-notice__dismiss-link")));
+        driver.findElement(boutonDismiss).click();
+
+    }
+
+    public WebElement prendreContactPhone(){
+        return driver.findElement(telephone);
+    }
+
+    public WebElement prendreContactMail(){
+        return driver.findElement(mail);
+    }
+
+    // barre de recherche
+
+    public WebElement cliquerDansBarre() {
+        return driver.findElement(searchInputTest);
+    }
+
+    public WebElement searchClick(){
+        return driver.findElement(searchLink);
+    }
+
+    public int nbProducts(){
+        List<WebElement> nbrArticles = driver.findElements(nbrArticle);
+        return nbrArticles.size();
+    }
 
 }
