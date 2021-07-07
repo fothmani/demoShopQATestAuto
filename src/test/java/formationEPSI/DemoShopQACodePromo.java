@@ -1,5 +1,6 @@
 package formationEPSI;
 
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -24,7 +25,6 @@ public class DemoShopQACodePromo {
 	 */
 
 	WebDriver driver;
-
 
 	// 1. Initialisation du contexte
 	@Before
@@ -69,7 +69,7 @@ public class DemoShopQACodePromo {
 		Assert.assertEquals("₹21.00", priceBasket);
 
 		Boolean isMessageAdd = driver.getPageSource()
-				.contains("Black Cross Back Maxi Dress has been added to your cart.");
+				.contains("“Black Cross Back Maxi Dress” has been added to your cart.");
 		Assert.assertEquals(true, isMessageAdd);
 
 		// click to the cart's icon
@@ -111,7 +111,7 @@ public class DemoShopQACodePromo {
 		elementColor.submit();
 
 		Thread.sleep(2000);
-		//Enter the payment's information
+		// Enter the payment's information
 		driver.get("https://shop.demoqa.com/cart/");
 
 		driver.findElement(By.xpath("//a[normalize-space()='Proceed to checkout']")).click();
@@ -133,10 +133,10 @@ public class DemoShopQACodePromo {
 
 	}
 
-//	@After
-//	public void tearDown() {
-//		driver.quit();
+	@After
+	public void tearDown() {
+		//driver.quit();
 
-	//}
+	}
 
 }
