@@ -1,4 +1,4 @@
-package com.formationepsi.pages;
+package com.formation.epsi.pages;
 
 import java.util.List;
 import org.openqa.selenium.By;
