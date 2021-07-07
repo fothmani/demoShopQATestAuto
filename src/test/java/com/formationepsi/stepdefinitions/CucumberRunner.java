@@ -7,7 +7,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-features = "src/test/resources/features/googleSearch.feature"
+features = "src/test/resources/features/searchTestCase.feature"
 ,glue= {"com.formationepsi.stepdefinitions"},
 monochrome = true,
 publish = true,
