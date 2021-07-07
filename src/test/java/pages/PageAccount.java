@@ -85,6 +85,10 @@ public class PageAccount {
 	By expectedInfoNotRegister = By.cssSelector("ul[class=\"woocommerce-error\"] li");
 	
 	
+	/**
+	 * Class constructor
+	 * @param driver the web driver to be used
+	 */
 	public PageAccount(WebDriver driver) {
 		this.driver = driver;
 	}

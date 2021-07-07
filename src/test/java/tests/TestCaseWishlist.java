@@ -29,7 +29,7 @@ public class TestCaseWishlist {
 	 * Initialisation du contexte de test
 	 * Nettoyage de la wish list avant les tests
 	 */
-	@Before
+//	@Before
 	public void setup() {
 		// Appel de webdriver manager
 		WebDriverManager.chromedriver().setup();
@@ -68,7 +68,7 @@ public class TestCaseWishlist {
 	/**
 	 * Fermer la fen�tre du navigateur
 	 */
-	@After
+//	@After
 	public void tearDown() {
 		// D�lai pour laisser la page se charger compl�tement avant de la fermer
 		try {
@@ -84,7 +84,7 @@ public class TestCaseWishlist {
 	/**
 	 * Add an article to the wish list by the home page
 	 */
-	@Test
+//	@Test
 	public void testAddToWishlistHome() {
 		this.setStartPage("");
 
@@ -102,7 +102,7 @@ public class TestCaseWishlist {
 	/**
 	 * Add an article to the wish list by the shop page
 	 */
-	@Test
+//	@Test
 	public void testAddToWishlistShop() {
 		this.setStartPage("shop/");
 
@@ -120,7 +120,7 @@ public class TestCaseWishlist {
 	/**
 	 * Add an article to the wish list by the product page
 	 */
-	@Test
+//	@Test
 	public void testAddToWishlistProduct() {
 		this.setStartPage("shop/");
 
@@ -140,7 +140,7 @@ public class TestCaseWishlist {
 	/**
 	 * Cas non passant : l'article est d�j� pr�sent dans la wish list
 	 */
-	@Test
+//	@Test
 	public void testAddToWishlistProductAlreadyThereFromShop() {
 		this.setStartPage("shop/");
 

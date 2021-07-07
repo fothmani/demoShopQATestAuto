@@ -15,11 +15,11 @@ import pages.PageAccount;
 import org.junit.experimental.runners.Enclosed;
 
 
-@RunWith(Enclosed.class)
+//@RunWith(Enclosed.class)
 public class TestCaseConnectionParameters {	
 
 
-	@RunWith(Parameterized.class)
+//	@RunWith(Parameterized.class)
 	public static class TheParameterizedPart {
 
 		// Our two parameters
@@ -35,7 +35,7 @@ public class TestCaseConnectionParameters {
 			this.password = password;
 		}
 
-		@Before
+//		@Before
 		public void setup() {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
@@ -44,12 +44,12 @@ public class TestCaseConnectionParameters {
 			objAccount = new PageAccount(driver);
 		}
 
-		@After
+//		@After
 		public void tearDown() {
 			driver.quit();
 		}
 
-		@Parameters
+//		@Parameters
 		public static Iterable<Object []> data() 
 		{
 			return Arrays.asList(new Object[][] {{ "test_kadd", "azert" }, 
@@ -58,7 +58,7 @@ public class TestCaseConnectionParameters {
 				{ "aert", "MDPtest_kadd" } });
 		}
 
-		@Test
+//		@Test
 		public void test_fail() {
 			objAccount.clickDismissCookie();	
 			objAccount.clickAccountLink();
@@ -70,7 +70,7 @@ public class TestCaseConnectionParameters {
 		}
 	}
 
-	@RunWith(Parameterized.class)
+//	@RunWith(Parameterized.class)
 	public static class otherParameterizedTest {
 		private String username;
 		private String password;
@@ -83,7 +83,7 @@ public class TestCaseConnectionParameters {
 			this.password = password;
 		}
 
-		@Before
+//		@Before
 		public void setup() {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
@@ -92,20 +92,20 @@ public class TestCaseConnectionParameters {
 			objAccount = new PageAccount(driver);
 		}
 
-		@After
+//		@After
 		public void tearDown() {
 			driver.quit();
 		}
 
 
-		@Parameters
+//		@Parameters
 		public static Iterable<Object []> data() 
 		{
 			return Arrays.asList(new Object[][] {{ "test_kadd", "MDPtest_kadd" }, 
 				{ "test_kadd@kadd.fr", "MDPtest_kadd" }});
 		}
 
-		@Test
+//		@Test
 		public void connection_mail_test()  {
 			objAccount.clickDismissCookie();		
 			objAccount.clickAccountLink();

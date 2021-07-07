@@ -32,7 +32,7 @@ public class TestCaseRegister {
 	/**
 	 * Executed before Test
 	 */
-	@Before
+//	@Before
     public void setup(){
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
@@ -44,7 +44,7 @@ public class TestCaseRegister {
 	/**
 	 * Executed after Test
 	 */
-	@After
+//	@After
     public void tearDown(){
 		driver.quit();
     }
@@ -52,7 +52,7 @@ public class TestCaseRegister {
 	/**
 	 * Test register Account
 	 */
-	@Test
+//	@Test
 	public void testRegisterWithValidData() {
 		accountObj.clickDismissCookie();
 		accountObj.clickAccountLink();
@@ -71,7 +71,7 @@ public class TestCaseRegister {
 	/**
 	 * Test register account with invalid Username
 	 */
-	@Test
+//	@Test
 	public void testRegisterWithInvalidUsername() {
 		accountObj.clickDismissCookie();
 		accountObj.clickAccountLink();
@@ -85,7 +85,7 @@ public class TestCaseRegister {
 	/**
 	 * Test register account with invalid Email
 	 */
-	@Test
+//	@Test
 	public void testRegisterWithInvalidEmail() {
 		accountObj.clickDismissCookie();
 		accountObj.clickAccountLink();

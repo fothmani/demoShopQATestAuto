@@ -16,7 +16,7 @@ public class TestCaseConnection {
 	WebDriver driver;
 	PageAccount objAccount;
 	
-	@Before
+//	@Before
 	public void setup() {
 		WebDriverManager.chromedriver().setup();
 	    driver = new ChromeDriver();
@@ -25,14 +25,14 @@ public class TestCaseConnection {
 		objAccount = new PageAccount(driver);
 	}
 	
-	@After
+//	@After
 	public void tearDown() {
 		driver.quit();
 	}
 	
 
 	
-	@Test
+//	@Test
 	public void connection_user_test()  {
 		objAccount.clickDismissCookie();	
 		objAccount.clickAccountLink();
@@ -41,7 +41,7 @@ public class TestCaseConnection {
 		Assert.assertEquals("test_kadd", objAccount.getLoginSucess());
 	}
 	
-	@Test
+//	@Test
 	public void connection_mail_test()  {
 		objAccount.clickDismissCookie();		
 		objAccount.clickAccountLink();
@@ -50,7 +50,7 @@ public class TestCaseConnection {
 		Assert.assertEquals("test_kadd", objAccount.getLoginSucess());
 	}
 		
-	@Test
+//	@Test
 	public void lost_password_test() {
 		objAccount.clickDismissCookie();		
 		objAccount.clickAccountLink();
@@ -63,7 +63,7 @@ public class TestCaseConnection {
 	
 	
 	
-	@Test
+//	@Test
 	public void connection_password_empty_test() {
 		objAccount.clickDismissCookie();		
 		objAccount.clickAccountLink();
@@ -72,7 +72,7 @@ public class TestCaseConnection {
 		Assert.assertEquals("Error: The password field is empty.", objAccount.getInfoConnectionFail());
 	}
 	
-	@Test
+//	@Test
 	public void connection_password_wrong_test() {
 		objAccount.clickDismissCookie();		
 		objAccount.clickAccountLink();
@@ -81,7 +81,7 @@ public class TestCaseConnection {
 		Assert.assertEquals("ERROR: The username or password you entered is incorrect. Lost your password?", objAccount.getInfoConnectionFail());
 	}
 		
-	@Test
+//	@Test
 	public void connection_login_wrong_test() {
 		objAccount.clickDismissCookie();		
 		objAccount.clickAccountLink();
@@ -90,7 +90,7 @@ public class TestCaseConnection {
 		Assert.assertEquals("ERROR: The username or password you entered is incorrect. Lost your password?", objAccount.getInfoConnectionFail());
 	}
 	
-	@Test
+//	@Test
 	public void connection_mail_wrong_test() {
 		objAccount.clickDismissCookie();		
 		objAccount.clickAccountLink();
@@ -99,7 +99,7 @@ public class TestCaseConnection {
 		Assert.assertEquals("ERROR: The username or password you entered is incorrect. Lost your password?", objAccount.getInfoConnectionFail());
 	}
 	
-	@Test
+//	@Test
 	public void connection_login_empty_test() {
 		objAccount.clickDismissCookie();		
 		objAccount.clickAccountLink();

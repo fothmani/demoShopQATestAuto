@@ -16,7 +16,7 @@ public class DemoShopQASearchTestCase {
 	String keyword = "t shirt";
 	int expectedNbProducts = 7;
 
-	@Before
+//	@Before
 	public void setUp() {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
@@ -24,7 +24,7 @@ public class DemoShopQASearchTestCase {
 		driver.manage().window().maximize();
 	}
 
-	@Test
+//	@Test
 	public void SearchArticles() {
 		DemoShopQAHomePage demoShopQAHome = new DemoShopQAHomePage(driver);
 		demoShopQAHome.clickOnsearch();
@@ -33,7 +33,7 @@ public class DemoShopQASearchTestCase {
 		Assert.assertEquals(expectedNbProducts, demoShopQAHome.nbProducts());
 	}
 
-	@After
+//	@After
 	public void tearDown() {
 		driver.quit();
 	}

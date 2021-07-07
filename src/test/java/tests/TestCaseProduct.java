@@ -14,14 +14,14 @@ public class TestCaseProduct {
 	
 	String expectedProductTitle = "BLUE DENIM SUPER OVERSIZED BOYFRIEND SHIRT";
 
-	@Before
+//	@Before
 	public void setUp() {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.get("https://shop.demoqa.com/");
 	}
 	
-	@Test
+//	@Test
 	public void showProductDetailsFromTitle(){
 		PageProduct objProduct = new PageProduct(driver);
 				
@@ -33,7 +33,7 @@ public class TestCaseProduct {
 		Assert.assertEquals(expectedProductTitle, objProduct.getProductTitle());
 			}
 	
-	@Test
+//	@Test
 	public void showProductDetailsFromCard(){
 		PageProduct objProduct = new PageProduct(driver);
 				
@@ -45,7 +45,7 @@ public class TestCaseProduct {
 		Assert.assertEquals(expectedProductTitle, objProduct.getProductTitle());
 	}
 	
-	@After
+//	@After
     public void tearDown() {
         driver.quit();
         System.out.println("Fermeture des fenêtres de test");

@@ -61,7 +61,7 @@ public class TestCaseDeconnexion {
 	/**
 	 * Sets up driver for the tests with chrome driver
 	 */
-	@Before
+//	@Before
 	public void setUp() {
 		WebDriverManager.chromedriver().setup();
 	    this.driver = new ChromeDriver();
@@ -72,7 +72,7 @@ public class TestCaseDeconnexion {
 	/**
 	 * stops the driver
 	 */
-	@After
+//	@After
 	public void tearDown() {
 		try {
 			Thread.sleep(1000);
@@ -86,7 +86,7 @@ public class TestCaseDeconnexion {
 	/**
 	 * Test Case : disconnection by the link within the text paragraph about user.
 	 */
-	@Test
+//	@Test
 	public void testCaseDisconnectionByLinkInTextParagraph() throws InterruptedException {
 		PageAccount page = new PageAccount(this.driver);
 		
@@ -106,7 +106,7 @@ public class TestCaseDeconnexion {
 	/**
 	 * Test Case : disconnection by the link within the left navigation bar
 	 */
-	@Test
+//	@Test
 	public void testCaseDisconnectionByLinkInLeftNavBar() throws InterruptedException {
 		PageAccount page = new PageAccount(this.driver);
 		
