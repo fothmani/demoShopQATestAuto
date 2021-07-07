@@ -1,6 +1,5 @@
 package formationEPSI;
 
-import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -67,10 +66,10 @@ public class DemoShopQACodePromo {
 		Assert.assertEquals(true, isQuantityOk);
 
 		String priceBasket = driver.findElement(By.xpath("//a[@title='View cart']//bdi[1]")).getText();
-		Assert.assertEquals("â‚¹21.00", priceBasket);
+		Assert.assertEquals("₹21.00", priceBasket);
 
 		Boolean isMessageAdd = driver.getPageSource()
-				.contains("â€œBlack Cross Back Maxi Dressâ€� has been added to your cart.");
+				.contains("Black Cross Back Maxi Dress has been added to your cart.");
 		Assert.assertEquals(true, isMessageAdd);
 
 		// click to the cart's icon
@@ -134,10 +133,10 @@ public class DemoShopQACodePromo {
 
 	}
 
-	@After
-	public void tearDown() {
-		driver.quit();
+//	@After
+//	public void tearDown() {
+//		driver.quit();
 
-	}
+	//}
 
 }
