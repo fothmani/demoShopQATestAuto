@@ -4,12 +4,12 @@ Feature: Search functionality
 
   @searchArticle
   Scenario: Search for articles
-  Given I am in the homepage
-  When I click on the button Search
-  Then An input text should be displayed with label "TYPE AND PRESS ENTER TO SEARCH" in order to search for my article
-  When I enter "Dress" in the search text and hit the enter of the keyboard
-  Then I should have 16 articles displayed
-  
+    Given I am in the homepage
+    When I click on the button Search
+    Then An input text should be displayed with label "TYPE AND PRESS ENTER TO SEARCH" in order to search for my article
+    When I enter "Dress" in the search text and hit the enter of the keyboard
+    Then I should have 16 articles displayed
+
   @searchArticleWithDataSet
   Scenario Outline: Search for articles
     Given I am in the homepage
