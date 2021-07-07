@@ -1,6 +1,4 @@
-com\formation\TestShopTools.class
-com\formationepsi\pages\DemoShopQAHomePage.class
-com\formationepsi\pagesObject\DemoShopHomePage.class
-formationEPSI\DemoShopQASearchTestCase.class
-com\formation\TestShopToolsPrendreContact.class
-com\formation\TestShopToolsAvecJunit.class
+com\formation\epsi\pages\DemoShopHomePage.class
+com\formation\epsi\pages\DemoShopQAHomePage.class
+com\formation\epsi\ProjetDemoShopAuto.class
+stepdefinitions\PrendreContact.class
