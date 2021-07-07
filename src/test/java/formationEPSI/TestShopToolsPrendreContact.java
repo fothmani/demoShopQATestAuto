@@ -40,9 +40,3 @@ public class TestShopToolsPrendreContact {
         demoShop.cliquerSurContactMail();
     }
 
-
-    @After
-    public void tearDown() {
-        driver.quit();
-    }
-}

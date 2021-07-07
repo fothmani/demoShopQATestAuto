@@ -1,13 +1,6 @@
-formationEPSI\DemoShopQASearchTestCase1.class
-formationEPSI\GoogleTestUsingPOM.class
+com\formation\TestShopTools.class
 com\formationepsi\pages\DemoShopQAHomePage.class
-formationEPSI\JUnitTestReporter$1.class
-formationEPSI\JUnitTestReporter.class
-formationEPSI\GoogleSearchTestCase.class
-com\formationepsi\test\AssertionsTest.class
-formationEPSI\GoogleSearchTestWithJunit.class
-formationEPSI\JunitRunner.class
-formationEPSI\DemoShopQASearchTestCaseUsingPOM.class
+com\formationepsi\pagesObject\DemoShopHomePage.class
 formationEPSI\DemoShopQASearchTestCase.class
-com\formationepsi\pages\GoogleSearchPage.class
-formationEPSI\TestCaseWithJunit.class
+com\formation\TestShopToolsPrendreContact.class
+com\formation\TestShopToolsAvecJunit.class
