@@ -1,4 +1,4 @@
-package com.formation.epsi;
+package formationEPSI;
 
 import org.junit.After;
 import org.junit.Assert;

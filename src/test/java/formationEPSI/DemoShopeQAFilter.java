@@ -1,4 +1,4 @@
-package com.formation.epsi;
+package formationEPSI;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -7,7 +7,7 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import com.formation.epsi.pages.DemoShopService;
+import com.formationepsi.pages.DemoShopService;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 

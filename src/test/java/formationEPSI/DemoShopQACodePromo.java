@@ -1,4 +1,4 @@
-package com.formation.epsi;
+package formationEPSI;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -9,10 +9,9 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-import com.formation.epsi.pages.DemoShopService;
+import com.formationepsi.pages.DemoShopService;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -68,10 +67,10 @@ public class DemoShopQACodePromo {
 		Assert.assertEquals(true, isQuantityOk);
 
 		String priceBasket = driver.findElement(By.xpath("//a[@title='View cart']//bdi[1]")).getText();
-		Assert.assertEquals("₹21.00", priceBasket);
+		Assert.assertEquals("â‚¹21.00", priceBasket);
 
 		Boolean isMessageAdd = driver.getPageSource()
-				.contains("“Black Cross Back Maxi Dress” has been added to your cart.");
+				.contains("â€œBlack Cross Back Maxi Dressâ€� has been added to your cart.");
 		Assert.assertEquals(true, isMessageAdd);
 
 		// click to the cart's icon

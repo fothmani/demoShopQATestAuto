@@ -1,4 +1,4 @@
-package com.formation.epsi.pages;
+package com.formationepsi.pages;
 
 import java.util.List;
 

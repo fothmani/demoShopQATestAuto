@@ -1,4 +1,4 @@
-package com.formation.epsi;
+package formationEPSI;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -7,12 +7,12 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import com.formation.epsi.pages.DemoShopService;
+import com.formationepsi.pages.DemoShopService;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DemoShopQABlog {
-	private WebDriver driver;
+	protected WebDriver driver;
 
 	// 1. Initialization of context
 	@Before
@@ -29,9 +29,7 @@ public class DemoShopQABlog {
 		DemoShopService demoShopQAHome = new DemoShopService(driver);
 		demoShopQAHome.clickOnBlog();
 		Assert.assertEquals("Add Color and Life with Accent Furnishings – ToolsQA Demo Site", driver.getTitle());
-		Assert.assertEquals("https://shop.demoqa.com/2016/05/04/add-color-and-life-with-accent-furnishings/",
-				driver.getCurrentUrl());
-
+		Assert.assertEquals("https://shop.demoqa.com/2016/05/04/add-color-and-life-with-accent-furnishings/",driver.getCurrentUrl());
 	}
 
 	@Test
@@ -48,7 +46,6 @@ public class DemoShopQABlog {
 		Boolean isError = driver.getPageSource()
 				.contains("Error: You entered an incorrect CAPTCHA answer. Please go back and try again!");
 		Assert.assertEquals(true, isError);
-
 	}
 
 	@After

@@ -1,4 +1,4 @@
-package com.formation.epsi;
+package formationEPSI;
 
 import java.util.List;
 
