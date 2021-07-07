@@ -32,7 +32,87 @@ public class DemoShopQASearchTestCase {
 		demoShopQAHome.fillSearchInput(keyword);
 		Assert.assertEquals(expectedNbProducts, demoShopQAHome.nbProducts());
 	}
+	
+	@Test
+	public void SearchArticles2() {
+		DemoShopQAHomePage demoShopQAHome = new DemoShopQAHomePage(driver);
+		demoShopQAHome.clickOnsearch();
+		Assert.assertEquals("TYPE AND PRESS ENTER TO SEARCH", demoShopQAHome.getLabel());
+		demoShopQAHome.fillSearchInput(keyword);
+		Assert.assertEquals(expectedNbProducts, demoShopQAHome.nbProducts());
+	}
+	
+	@Test
+	public void SearchArticles3() {
+		DemoShopQAHomePage demoShopQAHome = new DemoShopQAHomePage(driver);
+		demoShopQAHome.clickOnsearch();
+		Assert.assertEquals("TYPE AND PRESS ENTER TO SEARCH", demoShopQAHome.getLabel());
+		demoShopQAHome.fillSearchInput(keyword);
+		Assert.assertEquals(expectedNbProducts, demoShopQAHome.nbProducts());
+	}
+	
+	@Test
+	public void SearchArticles4() {
+		DemoShopQAHomePage demoShopQAHome = new DemoShopQAHomePage(driver);
+		demoShopQAHome.clickOnsearch();
+		Assert.assertEquals("TYPE AND PRESS ENTER TO SEARCH", demoShopQAHome.getLabel());
+		demoShopQAHome.fillSearchInput(keyword);
+		Assert.assertEquals(expectedNbProducts, demoShopQAHome.nbProducts());
+	}
+	
+	@Test
+	public void SearchArticles5() {
+		DemoShopQAHomePage demoShopQAHome = new DemoShopQAHomePage(driver);
+		demoShopQAHome.clickOnsearch();
+		Assert.assertEquals("TYPE AND PRESS ENTER TO SEARCH", demoShopQAHome.getLabel());
+		demoShopQAHome.fillSearchInput(keyword);
+		Assert.assertEquals(expectedNbProducts, demoShopQAHome.nbProducts());
+	}
+	
+	@Test
+	public void SearchArticles6() {
+		DemoShopQAHomePage demoShopQAHome = new DemoShopQAHomePage(driver);
+		demoShopQAHome.clickOnsearch();
+		Assert.assertEquals("TYPE AND PRESS ENTER TO SEARCH", demoShopQAHome.getLabel());
+		demoShopQAHome.fillSearchInput(keyword);
+		Assert.assertEquals(expectedNbProducts, demoShopQAHome.nbProducts());
+	}
 
+	@Test
+	public void SearchArticles7() {
+		DemoShopQAHomePage demoShopQAHome = new DemoShopQAHomePage(driver);
+		demoShopQAHome.clickOnsearch();
+		Assert.assertEquals("TYPE AND PRESS ENTER TO SEARCH", demoShopQAHome.getLabel());
+		demoShopQAHome.fillSearchInput(keyword);
+		Assert.assertEquals(expectedNbProducts, demoShopQAHome.nbProducts());
+	}
+	
+	@Test
+	public void SearchArticles8() {
+		DemoShopQAHomePage demoShopQAHome = new DemoShopQAHomePage(driver);
+		demoShopQAHome.clickOnsearch();
+		Assert.assertEquals("TYPE AND PRESS ENTER TO SEARCH", demoShopQAHome.getLabel());
+		demoShopQAHome.fillSearchInput(keyword);
+		Assert.assertEquals(expectedNbProducts, demoShopQAHome.nbProducts());
+	}
+	
+	@Test
+	public void SearchArticles9() {
+		DemoShopQAHomePage demoShopQAHome = new DemoShopQAHomePage(driver);
+		demoShopQAHome.clickOnsearch();
+		Assert.assertEquals("TYPE AND PRESS ENTER TO SEARCH", demoShopQAHome.getLabel());
+		demoShopQAHome.fillSearchInput(keyword);
+		Assert.assertEquals(expectedNbProducts, demoShopQAHome.nbProducts());
+	}
+	
+	@Test
+	public void SearchArticles10() {
+		DemoShopQAHomePage demoShopQAHome = new DemoShopQAHomePage(driver);
+		demoShopQAHome.clickOnsearch();
+		Assert.assertEquals("TYPE AND PRESS ENTER TO SEARCH", demoShopQAHome.getLabel());
+		demoShopQAHome.fillSearchInput(keyword);
+		Assert.assertEquals(expectedNbProducts, demoShopQAHome.nbProducts());
+	}
 	@After
 	public void tearDown() {
 		driver.quit();
