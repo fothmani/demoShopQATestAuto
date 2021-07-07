@@ -1,18 +1,19 @@
 -------------------------------------------------------------------------------
 Test set: formationEPSI.DemoShopQASearchTestCase
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.004 sec <<< FAILURE!
-SearchArticles(formationEPSI.DemoShopQASearchTestCase)  Time elapsed: 3.004 sec  <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.071 sec <<< FAILURE!
+SearchArticles(formationEPSI.DemoShopQASearchTestCase)  Time elapsed: 3.071 sec  <<< ERROR!
 org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".noo\-search"}
   (Session info: chrome=91.0.4472.124)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'POEC-GFP6FB3', ip: '10.60.44.31', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_291'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\POEC-L~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58921}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: f2bcf4d4322ffe60f5d9044bd2d995fd
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\POEC-L~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58942}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 79a3d089905ff74f1d86bcafd104641d
 *** Element info: {Using=class name, value=noo-search}
-	at sun.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)

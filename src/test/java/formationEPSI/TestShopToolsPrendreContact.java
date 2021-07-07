@@ -40,4 +40,108 @@ public class TestShopToolsPrendreContact {
         demoShop.cliquerSurContactMail();
     }
 
+
+    @Test
+    public void prendreContt() {
+        DemoShopHomePage demoShop = new DemoShopHomePage(driver);
+
+        demoShop.attendreBoutonDismiss();
+        //assert a faire qui permet de dire que la fenetre s'est bien fermé
+        Assert.assertEquals("le champ cliquable", true, demoShop.prendreContactPhone().isEnabled());
+        Assert.assertTrue("", demoShop.prendreContactPhone().isDisplayed() && demoShop.prendreContactPhone().isEnabled());
+        demoShop.cliquerSurContactTelephone();
+        Assert.assertEquals("le champ cliquable", true, demoShop.prendreContactMail().isDisplayed() && demoShop.prendreContactMail().isEnabled());
+        Assert.assertTrue("", demoShop.prendreContactPhone().isEnabled());
+        demoShop.cliquerSurContactMail();
+    }
+
+
+    @Test
+    public void prendreContct() {
+        DemoShopHomePage demoShop = new DemoShopHomePage(driver);
+
+        demoShop.attendreBoutonDismiss();
+        //assert a faire qui permet de dire que la fenetre s'est bien fermé
+        Assert.assertEquals("le champ cliquable", true, demoShop.prendreContactPhone().isEnabled());
+        Assert.assertTrue("", demoShop.prendreContactPhone().isDisplayed() && demoShop.prendreContactPhone().isEnabled());
+        demoShop.cliquerSurContactTelephone();
+        Assert.assertEquals("le champ cliquable", true, demoShop.prendreContactMail().isDisplayed() && demoShop.prendreContactMail().isEnabled());
+        Assert.assertTrue("", demoShop.prendreContactPhone().isEnabled());
+        demoShop.cliquerSurContactMail();
+    }
+
+
+    @Test
+    public void prendrontact() {
+        DemoShopHomePage demoShop = new DemoShopHomePage(driver);
+
+        demoShop.attendreBoutonDismiss();
+        //assert a faire qui permet de dire que la fenetre s'est bien fermé
+        Assert.assertEquals("le champ cliquable", true, demoShop.prendreContactPhone().isEnabled());
+        Assert.assertTrue("", demoShop.prendreContactPhone().isDisplayed() && demoShop.prendreContactPhone().isEnabled());
+        demoShop.cliquerSurContactTelephone();
+        Assert.assertEquals("le champ cliquable", true, demoShop.prendreContactMail().isDisplayed() && demoShop.prendreContactMail().isEnabled());
+        Assert.assertTrue("", demoShop.prendreContactPhone().isEnabled());
+        demoShop.cliquerSurContactMail();
+    }
+
+
+    @Test
+    public void prreContact() {
+        DemoShopHomePage demoShop = new DemoShopHomePage(driver);
+
+        demoShop.attendreBoutonDismiss();
+        //assert a faire qui permet de dire que la fenetre s'est bien fermé
+        Assert.assertEquals("le champ cliquable", true, demoShop.prendreContactPhone().isEnabled());
+        Assert.assertTrue("", demoShop.prendreContactPhone().isDisplayed() && demoShop.prendreContactPhone().isEnabled());
+        demoShop.cliquerSurContactTelephone();
+        Assert.assertEquals("le champ cliquable", true, demoShop.prendreContactMail().isDisplayed() && demoShop.prendreContactMail().isEnabled());
+        Assert.assertTrue("", demoShop.prendreContactPhone().isEnabled());
+        demoShop.cliquerSurContactMail();
+    }
+
+
+    @Test
+    public void prendContact() {
+        DemoShopHomePage demoShop = new DemoShopHomePage(driver);
+
+        demoShop.attendreBoutonDismiss();
+        //assert a faire qui permet de dire que la fenetre s'est bien fermé
+        Assert.assertEquals("le champ cliquable", true, demoShop.prendreContactPhone().isEnabled());
+        Assert.assertTrue("", demoShop.prendreContactPhone().isDisplayed() && demoShop.prendreContactPhone().isEnabled());
+        demoShop.cliquerSurContactTelephone();
+        Assert.assertEquals("le champ cliquable", true, demoShop.prendreContactMail().isDisplayed() && demoShop.prendreContactMail().isEnabled());
+        Assert.assertTrue("", demoShop.prendreContactPhone().isEnabled());
+        demoShop.cliquerSurContactMail();
+    }
+
+
+    @Test
+    public void prereContact() {
+        DemoShopHomePage demoShop = new DemoShopHomePage(driver);
+
+        demoShop.attendreBoutonDismiss();
+        //assert a faire qui permet de dire que la fenetre s'est bien fermé
+        Assert.assertEquals("le champ cliquable", true, demoShop.prendreContactPhone().isEnabled());
+        Assert.assertTrue("", demoShop.prendreContactPhone().isDisplayed() && demoShop.prendreContactPhone().isEnabled());
+        demoShop.cliquerSurContactTelephone();
+        Assert.assertEquals("le champ cliquable", true, demoShop.prendreContactMail().isDisplayed() && demoShop.prendreContactMail().isEnabled());
+        Assert.assertTrue("", demoShop.prendreContactPhone().isEnabled());
+        demoShop.cliquerSurContactMail();
+    }
+
+
+    @Test
+    public void prct() {
+        DemoShopHomePage demoShop = new DemoShopHomePage(driver);
+
+        demoShop.attendreBoutonDismiss();
+        //assert a faire qui permet de dire que la fenetre s'est bien fermé
+        Assert.assertEquals("le champ cliquable", true, demoShop.prendreContactPhone().isEnabled());
+        Assert.assertTrue("", demoShop.prendreContactPhone().isDisplayed() && demoShop.prendreContactPhone().isEnabled());
+        demoShop.cliquerSurContactTelephone();
+        Assert.assertEquals("le champ cliquable", true, demoShop.prendreContactMail().isDisplayed() && demoShop.prendreContactMail().isEnabled());
+        Assert.assertTrue("", demoShop.prendreContactPhone().isEnabled());
+        demoShop.cliquerSurContactMail();
+    }
 }
