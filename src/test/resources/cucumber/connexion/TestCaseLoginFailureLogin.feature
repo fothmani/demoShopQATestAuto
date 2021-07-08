@@ -23,12 +23,12 @@ Feature: Connexion de l utilisateur
 
   @tag1
   Scenario Outline: L utilisateur tente de se connecter avec un login incorrect
-		Given <name> - Je me trouve sur la page de connexion
-    When <name> - J entre <login> dans le champ "username or email address"
-    And <name> - J entre <mot_de_passe> dans le champ "password"
-    And <name> - Je clique sur le bouton Log in
-    Then <name> - Je dois rester sur la page de connexion
-    And <name> - La page doit afficher le message d erreur <error>
+		Given <name> - FL - Je me trouve sur la page de connexion
+    When <name> - FL - J entre <login> dans le champ "username or email address"
+    And <name> - FL - J entre <mot_de_passe> dans le champ "password"
+    And <name> - FL - Je clique sur le bouton Log in
+    Then <name> - FL - Je dois rester sur la page de connexion
+    And <name> - FL - La page doit afficher le message d erreur <error>
     
     Examples: 
       | name                | login           | mot_de_passe | error                                                                         |

@@ -1,26 +1,20 @@
 package cucumber.connexion;
 
 import org.junit.Assert;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 public class TestCaseLoginFailurePassword {
 	
-	protected WebDriver driver;
-	
 	protected By submitLoginButton = By.className("woocommerce-form-login");
+
+	protected By buttonTag = By.tagName("button");
 	
 	protected By dismissCookie = By.cssSelector("p.demo_store a");
 	
@@ -33,47 +27,36 @@ public class TestCaseLoginFailurePassword {
 	protected By passwordInput = By.id("password");
 	
 	
-	@Before
-	public void setUp() {
-		WebDriverManager.chromedriver().setup();
-		this.driver = new ChromeDriver();
-	}
-	
-	@After
-	public void setDown() {
-		this.driver.close();
-	}
-	
-	@Given("^(.*) - Je me trouve sur la page de connexion$")
+	@Given("^(.*) - FP - Je me trouve sur la page de connexion$")
 	public void jeMeTrouveSurLaPageDeConnexionFailurePassword(String name) {
-		this.driver.get("https://shop.demoqa.com/my-account/");
-		this.driver.findElement(this.dismissCookie).click();
+		BeforeAfterTest.driver.get("https://shop.demoqa.com/my-account/");
+		BeforeAfterTest.driver.findElement(this.dismissCookie).click();
 	}
 	
-	@When("^(.*) - J entre (.*) dans le champ \"username or email address\"$")
+	@When("^(.*) - FP - J entre (.*) dans le champ \"username or email address\"$")
 	public void jEntreLeLoginDansLeChampUsernameOrEmailAddressFailurePassword(String name, String login) {
-		this.driver.findElement(loginInput).sendKeys(login);
+		BeforeAfterTest.driver.findElement(loginInput).sendKeys(login);
 	}
 	
-	@And("^(.*) - J entre (.*) dans le champ \"password\"$")
+	@And("^(.*) - FP - J entre (.*) dans le champ \"password\"$")
 	public void jEntreLeMotDePasseDansLeChampPasswordFailurePassword(String name, String mot_de_passe) {
-		this.driver.findElement(passwordInput).sendKeys(mot_de_passe);
+		BeforeAfterTest.driver.findElement(passwordInput).sendKeys(mot_de_passe);
 	}
 	
-	@And("^(.*) - Je clique sur le bouton Log in$")
+	@And("^(.*) - FP - Je clique sur le bouton Log in$")
 	public void jeCliqueSurLeBoutonLogInFailurePassword(String name) {
-		this.driver.findElement(submitLoginButton).click();
+		BeforeAfterTest.driver.findElement(submitLoginButton).findElement(buttonTag).click();
 	}
 	
-	@Then("^(.*) - Je dois rester sur la page de connexion$")
+	@Then("^(.*) - FP - Je dois rester sur la page de connexion$")
 	public void jeDoisResterSurLaPageDeConnexionFailurePassword(String name) {
 		Assert.assertTrue(
-				this.driver.getCurrentUrl().contains("/my-account")
+				BeforeAfterTest.driver.getCurrentUrl().contains("/my-account")
 		);
 		
 		try {
 			Assert.assertTrue(
-					this.driver.findElement(submitLoginButton) != null
+					BeforeAfterTest.driver.findElement(submitLoginButton) != null
 			);
 		}
 		catch(NoSuchElementException e) {
@@ -81,10 +64,10 @@ public class TestCaseLoginFailurePassword {
 		}
 	}
 	
-	@And("^(.*) - La page doit afficher le message d erreur (.*)$")
+	@And("^(.*) - FP - La page doit afficher le message d erreur (.*)$")
 	public void laPageDoitAfficherUnMessageDErreurFailurePassword(String name, String error) {
 		Assert.assertTrue(
-				this.driver.findElement(fail_pswrd).getText().equals(error)
+				BeforeAfterTest.driver.findElement(fail_pswrd).getText().equals(error)
 		);
 	}
 }

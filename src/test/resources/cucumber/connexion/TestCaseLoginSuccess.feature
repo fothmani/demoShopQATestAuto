@@ -23,12 +23,12 @@ Feature: Connexion de l utilisateur
 
   @tag1
   Scenario Outline: L utilisateur se connecte avec succès sur son compte client
-		Given <name> - Je me trouve sur la page de connexion
-    When <name> - J entre <login> dans le champ "username or email address"
-    And <name> - J entre <mot_de_passe> dans le champ "password"
-    And <name> - Je clique sur le bouton Log in
-    Then <name> - Je dois arriver sur la page de mon compte client
-    And <name> - Je dois être connecté en tant que <login>
+		Given <name> - SC - Je me trouve sur la page de connexion
+    When <name> - SC - J entre <login> dans le champ "username or email address"
+    And <name> - SC - J entre <mot_de_passe> dans le champ "password"
+    And <name> - SC - Je clique sur le bouton Log in
+    Then <name> - SC - Je dois arriver sur la page de mon compte client
+    And <name> - SC - Je dois être connecté en tant que <login>
 
     Examples: 
       | name                | login             | mot_de_passe |
