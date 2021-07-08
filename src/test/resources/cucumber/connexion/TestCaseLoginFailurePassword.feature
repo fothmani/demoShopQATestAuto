@@ -32,5 +32,5 @@ Feature: Connexion de l utilisateur
 
     Examples: 
       | name                | login     | mot_de_passe | error                                                                         |
-      | mot_de_passe_vide   | test_kadd |              | Error: The password field is empty.                                           |
+      #| mot_de_passe_vide   | test_kadd |              | Error: The password field is empty.                                           |
       | mot_de_passe_errone | test_kadd | qsx          | ERROR: The username or password you entered is incorrect. Lost your password? |

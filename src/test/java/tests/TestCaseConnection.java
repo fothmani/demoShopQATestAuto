@@ -49,28 +49,6 @@ public class TestCaseConnection {
 		
 		Assert.assertEquals("test_kadd", objAccount.getLoginSucess());
 	}
-		
-	@Test
-	public void lost_password_test() {
-		objAccount.clickDismissCookie();		
-		objAccount.clickAccountLink();
-		objAccount.clickLostPassword();
-		objAccount.fillForgetPassword("kadd_test");
-		objAccount.clickResetButton();
-		
-		Assert.assertEquals("Password reset email has been sent.", objAccount.getMailResetPassword());
-	}
-	
-	
-	
-	@Test
-	public void connection_password_empty_test() {
-		objAccount.clickDismissCookie();		
-		objAccount.clickAccountLink();
-		objAccount.fillLoginForm("test_kadd", "");
-		
-		Assert.assertEquals("Error: The password field is empty.", objAccount.getInfoConnectionFail());
-	}
 	
 	@Test
 	public void connection_password_wrong_test() {
@@ -99,7 +77,16 @@ public class TestCaseConnection {
 		Assert.assertEquals("ERROR: The username or password you entered is incorrect. Lost your password?", objAccount.getInfoConnectionFail());
 	}
 	
-	@Test
+//	@Test
+	public void connection_password_empty_test() {
+		objAccount.clickDismissCookie();		
+		objAccount.clickAccountLink();
+		objAccount.fillLoginForm("test_kadd", "");
+		
+		Assert.assertEquals("Error: The password field is empty.", objAccount.getInfoConnectionFail());
+	}
+	
+//	@Test
 	public void connection_login_empty_test() {
 		objAccount.clickDismissCookie();		
 		objAccount.clickAccountLink();
@@ -107,7 +94,15 @@ public class TestCaseConnection {
 
 		Assert.assertEquals("Error: Username is required.", objAccount.getInfoConnectionFail());
 	}
+		
+//	@Test
+	public void lost_password_test() {
+		objAccount.clickDismissCookie();		
+		objAccount.clickAccountLink();
+		objAccount.clickLostPassword();
+		objAccount.fillForgetPassword("kadd_test");
+		objAccount.clickResetButton();
+		
+		Assert.assertEquals("Password reset email has been sent.", objAccount.getMailResetPassword());
+	}
 }
-
-
-

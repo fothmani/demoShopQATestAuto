@@ -32,6 +32,6 @@ Feature: Connexion de l utilisateur
     
     Examples: 
       | name                | login           | mot_de_passe | error                                                                         |
-      | login_vide          | ""              | MDPtest_kadd | Error: Username is required.                                                  |
+      #| login_vide          |                 | MDPtest_kadd | Error: Username is required.                                                  |
       | identifiant_errone  | osef            | MDPtest_kadd | ERROR: The username or password you entered is incorrect. Lost your password? |
       | email_errone        | osef@chicken.fr | MDPtest_kadd | ERROR: The username or password you entered is incorrect. Lost your password? |
