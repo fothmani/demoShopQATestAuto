@@ -96,7 +96,7 @@ public class DemoShopQACodePromo {
 
 	}
 
-	@Test
+	
 	public void commandProduct() throws InterruptedException {
 		driver.get("https://shop.demoqa.com/product/pink-drop-shoulder-oversized-t-shirt/");
 
